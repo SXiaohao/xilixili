@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{008FC643-162A-4086-9CC2-68D4ACE57D34}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HckjXiliXili</RootNamespace>
+    <AssemblyName>HckjXiliXili</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>..\..\WindowsFormsApp4 - 副本\WindowsFormsApp4\CSkin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\Episode.cs" />
+    <Compile Include="UI\UserControl\EpisodeBtnCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControl\EpisodeBtnCard.Designer.cs">
+      <DependentUpon>EpisodeBtnCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapper\PlayMapper.cs" />
+    <Compile Include="Utility\WebBrowserFeatures.cs" />
+    <Compile Include="View\CartoonPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CartoonPage.Designer.cs">
+      <DependentUpon>CartoonPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Cartoon.cs" />
+    <Compile Include="Entity\New.cs" />
+    <Compile Include="Entity\User.cs" />
+    <Compile Include="Enum\RegisterState.cs" />
+    <Compile Include="View\HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapper\LoginMapper.cs" />
+    <Compile Include="Mapper\RegisterMapper.cs" />
+    <Compile Include="View\PlayPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PlayPage.Designer.cs">
+      <DependentUpon>PlayPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RegisterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RegisterPage.Designer.cs">
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserControl\CartoonCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControl\CartoonCard.Designer.cs">
+      <DependentUpon>CartoonCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapper\CartoonMapper.cs" />
+    <Compile Include="Mapper\NewMapper.cs" />
+    <Compile Include="UI\UserControl\NewCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserControl\NewCard.Designer.cs">
+      <DependentUpon>NewCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\DBHelper.cs" />
+    <Compile Include="Enum\LoginState.cs" />
+    <Compile Include="Utility\StateString.cs" />
+    <EmbeddedResource Include="UI\UserControl\EpisodeBtnCard.resx">
+      <DependentUpon>EpisodeBtnCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CartoonPage.resx">
+      <DependentUpon>CartoonPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PlayPage.resx">
+      <DependentUpon>PlayPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RegisterPage.resx">
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControl\CartoonCard.resx">
+      <DependentUpon>CartoonCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserControl\NewCard.resx">
+      <DependentUpon>NewCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="UI\CartoonImages\1.png" />
+    <Content Include="UI\NewImages\1.jpg" />
+    <Content Include="UI\NewImages\5.jpg" />
+    <Content Include="UI\NewImages\6.jpg" />
+    <Content Include="UI\NewImages\2.jpg" />
+    <Content Include="UI\NewImages\3.jpg" />
+    <Content Include="UI\NewImages\4.jpg" />
+    <Content Include="UI\Images\mouse.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
